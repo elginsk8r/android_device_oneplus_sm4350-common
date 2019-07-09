@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-ev
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -464,7 +464,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oneplus
+    device/oneplus/common
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -486,10 +486,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -510,6 +506,13 @@ PRODUCT_PACKAGES += \
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
     libstdc++.vendor
+
+# VNDK
+PRODUCT_PACKAGES += \
+    evervolv_compatibility_matrix.xml \
+    lineage_compatibility_matrix.xml \
+    oneplus_compatibility_matrix.xml \
+    qcom_compatibility_matrix.xml
 
 # Vibrator
 PRODUCT_PACKAGES += \
