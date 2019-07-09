@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.oneplus_holi"
+#define LOG_TAG "vendor.evervolv.touch@1.0-service.oneplus_holi"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
@@ -24,8 +24,8 @@ using android::sp;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
-using vendor::lineage::touch::V1_0::ITouchscreenGesture;
-using vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
+using vendor::evervolv::touch::V1_0::ITouchscreenGesture;
+using vendor::evervolv::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
     sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();
