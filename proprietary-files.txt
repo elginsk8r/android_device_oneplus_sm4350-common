@@ -360,7 +360,6 @@ vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.oneplus.hardware.charger@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
-vendor/etc/charger_fw_fstab.qti
 vendor/lib/vendor.oneplus.hardware.charger@1.0.so
 vendor/lib64/vendor.oneplus.hardware.charger@1.0.so
 
@@ -568,7 +567,6 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics (Adreno)
--vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -789,7 +787,7 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Kernel
-vendor/bin/init.kernel.post_boot-lahaina.sh
+vendor/bin/init.kernel.post_boot-holi.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
@@ -824,19 +822,19 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/media_lahaina/video_system_specs.json
+vendor/etc/media_holi/video_system_specs.json
 vendor/etc/media/video_system_specs.json
 vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_lahaina.xml
-vendor/etc/media_codecs_lahaina_vendor.xml
+vendor/etc/media_codecs_holi.xml
+vendor/etc/media_codecs_holi_vendor.xml
 vendor/etc/media_codecs_performance.xml
-vendor/etc/media_codecs_performance_lahaina.xml
-vendor/etc/media_codecs_performance_lahaina_vendor.xml
+vendor/etc/media_codecs_performance_holi.xml
+vendor/etc/media_codecs_performance_holi_vendor.xml
 vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_lahaina.xml
-vendor/etc/media_profiles_lahaina_vendor.xml
+vendor/etc/media_profiles_holi.xml
+vendor/etc/media_profiles_holi_vendor.xml
 vendor/etc/media_profiles_vendor.xml
 -vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/video_system_specs.json
