@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := lahaina
+TARGET_BOOTLOADER_BOARD_NAME := holi
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -52,7 +52,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm4350
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
+TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
@@ -60,7 +60,7 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMO
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := lahaina
+TARGET_BOARD_PLATFORM := holi
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
