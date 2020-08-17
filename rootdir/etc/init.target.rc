@@ -151,7 +151,7 @@ on boot
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
-    setprop vendor.usb.controller a600000.dwc3
+    setprop vendor.usb.controller 4e00000.dwc3
 #ifdef VENDOR_EDIT
     #Load WLAN driver
     #exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan
@@ -205,7 +205,7 @@ on charger
     stop oemlogkit
     stop vendor.ipacm
     start vendor.power_off_alarm
-    setprop sys.usb.controller a600000.dwc3
+    setprop sys.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
 
 service vendor.lowi /vendor/bin/lowirpcd
