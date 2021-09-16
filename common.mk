@@ -453,7 +453,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus
+    vendor.lineage.touch@1.0-service.oneplus_holi
 
 # tri-state-key
 PRODUCT_PACKAGES += \
