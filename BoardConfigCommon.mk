@@ -73,9 +73,6 @@ TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
-# Bluetooth
-TARGET_USE_QTI_BT_STACK := true
-
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
