@@ -1,12 +1,10 @@
-//
-// Copyright (C) 2021 The LineageOS Project
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-
-cc_library_shared {
-    name: "lib-imsvtshim",
-    srcs: ["lib-imsvtshim.cpp"],
-    compile_multilib: "64",
+// libgui
+cc_library {
+    name: "libgui_shim",
+    shared_libs: [
+        "libgui",
+        "libutils",
+    ],
+    srcs: ["gui_shim.cpp"],
     system_ext_specific: true,
 }
