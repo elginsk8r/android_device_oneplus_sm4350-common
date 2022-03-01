@@ -297,10 +297,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.oneplus
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -376,11 +372,11 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1:64 \
     android.hardware.nfc@1.2:64 \
     android.hardware.secure_element@1.0:64 \
+    android.hardware.nfc@1.2-service.st:64 \
     com.android.nfc_extras \
+    nfc_nci.st21nfc.default \
     SecureElement \
-    Tag \
-    vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    Tag
 
 # OMX
 PRODUCT_PACKAGES += \
