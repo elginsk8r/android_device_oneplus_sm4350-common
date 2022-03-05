@@ -4,5 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# NFC
+/dev/st21nfc                                   0660    nfc     nfc
+
+# Revise the permissions for Param
+/dev/block/by-name/param                       0660    root    system
+
 # Reserve
-/dev/block/bootdevice/by-name/oplusreserve1    0660    root    system
+/dev/block/sde72                               0600   system     system
+/dev/block/bootdevice/by-name/reserve1         0600   system     system

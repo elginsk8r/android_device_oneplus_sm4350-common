@@ -3,22 +3,20 @@ aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 audio.deep_buffer.media=true
-audio.offload.video=false
 persist.audio.fluence.voicecomm=true
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
-persist.vendor.audio.avs.afe_api_version=9
-persist.vendor.audio.bcl.enabled=false
+persist.vendor.audio.avs.afe_api_version=2
+persist.vendor.audio.fluence.audiorec=true
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicerec=true
-persist.vendor.audio.ha_proxy.enabled=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.ha_proxy.enabled=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.speaker.prot.enable=false
-persist.vendor.audio.spv4.enable=false
-persist.vendor.audio.vbat.enabled=false
+persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.audio.monitorRotation=true
@@ -59,11 +57,10 @@ vendor.audio.feature.keep_alive.enable=true
 vendor.audio.feature.kpi_optimize.enable=true
 vendor.audio.feature.maxx_audio.enable=false
 vendor.audio.feature.multi_voice_session.enable=true
-vendor.audio.feature.power_mode.enable=true
 vendor.audio.feature.ras.enable=true
 vendor.audio.feature.record_play_concurency.enable=false
 vendor.audio.feature.snd_mon.enable=true
-vendor.audio.feature.spkr_prot.enable=false
+vendor.audio.feature.spkr_prot.enable=true
 vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.usb_offload.enable=true
@@ -94,18 +91,15 @@ vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lc3
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.oneplus.bt.asd.chain=0
 persist.vendor.oneplus.bt.asd.firmware=false
-persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
-persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.soc=hastings
@@ -115,6 +109,7 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
 # Camera
+camera.disable_zsl_mode=1
 persist.vendor.camera.privapp.list=com.oneplus.camera,com.oem.autotest,com.oneplus.factorymode
 vendor.arcsoft.sn_isHardCopy=0
 vendor.camera.algo.jpeghwencode=1
@@ -131,17 +126,18 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
-ro.vendor.display.sensortype=2
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
+vendor.display.disable_rounded_corner_thread=0
 vendor.display.disable_scaler=0
 vendor.display.enable_async_powermode=0
 vendor.display.enable_early_wakeup=1
 vendor.display.enable_optimize_refresh=1
-vendor.display.enable_posted_start_dyn=1
+vendor.display.enable_rounded_corner=0
+vendor.display.secure_preview_buffer_format=420_sp
 vendor.display.use_layer_ext=1
 vendor.display.use_smooth_motion=1
 
@@ -186,6 +182,8 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.gralloc.disable_ubwc=0
+vendor.gralloc.secure_preview_buffer_format=420_sp
+vendor.gralloc.secure_preview_only=1
 
 # Incremental FS
 ro.incremental.enable=true
@@ -204,6 +202,16 @@ vendor.power.pasr.enabled=false
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
+DEVICE_PROVISIONED=1
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.dl_mode=5
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.df.ul_mode=5
+persist.data.wda.enable=true
+persist.radio.multisim.config=ssss
 persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
@@ -212,6 +220,7 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.radio.5g_mode_pref=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.arfcn_test_mode=3
+persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.bar_fake_gcell=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
@@ -228,8 +237,12 @@ persist.vendor.radio.uicc_se_enabled=true
 ro.com.android.dataroaming=false
 
 # Sensors
-persist.vendor.sensors.allow_non_default_discovery=true
-persist.vendor.sensors.on_change_sample_period=true
+persist.vendor.sensors.debug.ssc_qmi_debug=true
+persist.vendor.sensors.enable.mag_filter=true
+persist.vendor.sensors.hal_trigger_ssr=false
+persist.vendor.sensors.enable.rt_task=false
+persist.vendor.sensors.support_direct_channel=false
+persist.vendor.sensors.enable.bypass_worker=true
 persist.vendor.sensors.sync_request=true
 
 # Shutdown
