@@ -9,3 +9,13 @@ on init
 
 on property:vendor.radio.multisim.config=*
     setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
+
+on boot
+    chown radio radio /proc/force_reset
+    chown system system /dev/param
+    chown system system /proc/pmicWd
+    chown system system /proc/s2_reset_config
+    chown system system /proc/simholder/sim_holder_detect
+
+on post-fs-data
+    mkdir /data/vendor/oemnvitems 0771 radio radio
