@@ -64,7 +64,6 @@ on init
     write /dev/cpuctl/top-app/cpu.rt_runtime_us 950000
     write /dev/cpuctl/rt/cpu.rt_runtime_us 950000
 
-    write /proc/restart_level_all 0
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
@@ -151,7 +150,7 @@ on boot
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
-    setprop vendor.usb.controller 4e00000.dwc3
+    setprop vendor.usb.controller a600000.dwc3
 #ifdef VENDOR_EDIT
     #Load WLAN driver
     #exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan
@@ -159,10 +158,6 @@ on boot
 #endif
     #Allow access to memory hotplug device attributes
     chown system system /sys/kernel/mem-offline/anon_migrate
-
-    # Reduce default vibrator gain from 0x80 to 0x55,
-    # also allow gain customization via persistent property
-    write /sys/class/leds/vibrator/gain ${persist.vendor.vib.gain:-0x55}
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -205,7 +200,7 @@ on charger
     stop oemlogkit
     stop vendor.ipacm
     start vendor.power_off_alarm
-    setprop sys.usb.controller 4e00000.dwc3
+    setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
 service vendor.lowi /vendor/bin/lowirpcd
@@ -232,6 +227,11 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     user system
     group system
     disabled
+
+#service vendor.mdm_helper /vendor/bin/mdm_helper
+#    class core
+#    group system wakelock
+#    disabled
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy

@@ -23,6 +23,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.goodix3626.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.nxp.eventprocessor</name>
         <version>1.0</version>
         <interface>
