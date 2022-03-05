@@ -1,0 +1,178 @@
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on early-init
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
+on fs
+    # Touchpanel firmware
+    write /sys/devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0/tp_fw_update 0
+
+    # Touchpanel
+    chown system system /proc/touchpanel/tp_debug_log
+    chown system system /proc/touchpanel/gesture_enable
+    chown system system /proc/touchpanel/gesture_switch
+    chown system system /proc/touchpanel/tpedge_limit_enable
+    chown system system /proc/touchpanel/tp_switch_dead_zone
+    chown system system /proc/touchpanel/tp_switch_corner_dead_l_zone
+    chown system system /proc/touchpanel/tp_switch_corner_dead_p_zone
+    chown system system /proc/touchpanel/touch_apk
+    chown system system /proc/touchpanel/get_device_temperature
+    chown system system /proc/touchpanel/get_ic_firmware_version
+
+    # S2 reset config
+    chown system system /proc/s2_reset_config
+    chown system system /proc/pmicWd
+
+    # Sim card holder detect
+    chmod 0666 /proc/simholder/sim_holder_detect
+    chown system system /proc/simholder/sim_holder_detect
+
+    # Thermal
+    chown system system /dev/msm_thermal
+    chown system system /dev/skin_thermal
+    chown system system /dev/modem_skin_thermal
+    chown system system /dev/mmw0_thermal
+    chown system system /dev/mmw1_thermal
+    chown system system /dev/mmw2_thermal
+    chmod 0664 /dev/msm_thermal
+    chmod 0664 /dev/skin_thermal
+    chmod 0664 /dev/modem_skin_thermal
+    chmod 0664 /dev/mmw0_thermal
+    chmod 0664 /dev/mmw1_thermal
+    chmod 0664 /dev/mmw2_thermal
+
+    # Display
+    chmod 0666 /sys/class/drm/card0-DSI-1/hbm
+    chmod 0666 /sys/class/drm/card0-DSI-1/hbm_brightness
+    chmod 0666 /sys/class/drm/card0-DSI-1/SRGB
+    chmod 0666 /sys/class/drm/card0-DSI-1/DCI_P3
+    chmod 0666 /sys/class/drm/card0-DSI-1/aod
+    chmod 0666 /sys/class/drm/card0-DSI-1/night_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/panel_serial_number
+    chmod 0666 /sys/class/drm/card0-DSI-1/cabc
+    chmod 0666 /sys/class/drm/card0-DSI-1/oplus_shutdownflag
+    chmod 0666 /sys/class/drm/card0-DSI-1/oneplus_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/adaption_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/notify_fppress
+    chmod 0666 /sys/class/drm/card0-DSI-1/dim_alpha
+    chmod 0666 /sys/class/drm/card0-DSI-1/notify_dim
+    chmod 0666 /sys/class/drm/card0-DSI-1/force_screenfp
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_p3_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode
+    chmod 0666 /sys/class/drm/card0-DSI-1/dimlayer_bl_en
+    chmod 0666 /sys/class/drm/card0-DSI-1/dither_en
+    chmod 0666 /sys/class/drm/card0-DSI-1/oplus_msd_aod
+
+    # Radio
+    chmod 0666 /sys/class/drm/card0-DSI-1/osc_mode
+    chown radio radio /sys/class/drm/card0-DSI-1/osc_mode
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
+    chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
+    chown radio radio /proc/force_reset
+
+on late-fs
+    chown system system /mnt/vendor/op2
+    mkdir /mnt/vendor/op2/recovery 0770 root system
+
+on boot
+    # Fingerprint
+    chmod 0666 /dev/goodix_fp
+    chmod 0664 /sys/devices/platform/soc/soc:goodix_fp/screen_state
+    chown system system /sys/devices/platform/soc/soc:goodix_fp/screen_state
+
+    chmod 0660 /sys/devices/platform/soc/soc:fingerprint_detect/sensor_version
+    chown system system /sys/devices/platform/soc/soc:fingerprint_detect/sensor_version
+
+    # access permission for egis
+    chmod 0666 /dev/esfp0
+    chown system system /dev/esfp0
+
+    # access permission for egis navigation
+    chmod 0666 /sys/devices/platform/egis_input/navigation_event
+    chown system system /sys/devices/platform/egis_input/navigation_event
+    chmod 0666 /sys/devices/platform/egis_input/navigation_enable
+    chown system system /sys/devices/platform/egis_input/navigation_enable
+
+    chmod 0666 /proc/touchpanel/touch_hold
+    chown system system /proc/touchpanel/touch_hold
+
+    setprop ro.boot.wificountrycode 00
+
+    chown system system /proc/rf_cable_config
+    chown system system /proc/rf_factory_mode
+
+    chmod 666 /dev/input/event1
+    chmod 666 /dev/input/event2
+    chmod 666 /dev/input/event8
+    chmod 666 /dev/input/event10
+
+on post-fs
+    write /dev/ipa 1
+
+    chmod 0664 /sys/module/qpnp_smb5/parameters/usb_connector_temp
+    chown system system /sys/module/qpnp_smb5/parameters/usb_connector_temp
+    chmod 0664 /sys/module/qpnp_smb5/parameters/disable_connector_protect
+    chown system system /sys/module/qpnp_smb5/parameters/disable_connector_protect
+    chmod 0664 /sys/module/qpnp_smb5/parameters/usb_interval_temp
+    chown system system /sys/module/qpnp_smb5/parameters/usb_interval_temp
+    chmod 0664 /sys/module/qpnp_smb5/parameters/call_on
+    chown radio radio /sys/module/qpnp_smb5/parameters/call_on
+    chmod 0666 /sys/module/qpnp_smb5/parameters/video_call_on
+    chown system system /sys/module/qpnp_smb5/parameters/video_call_on
+
+    chown system system /proc/skin_temp_thrd/fastchg_thd
+    chown system system /proc/skin_temp_thrd/fastchg_lcdoff_thd
+    chown system system /proc/skin_temp_thrd/norchg_thd
+    chown system system /proc/skin_temp_thrd/norchg_lcdoff_thd
+
+    mkdir /mnt/vendor/persist/engineermode  0777 system system
+
+    chown system system /proc/ship_mode
+    chown system system /dev/param
+
+    # Charging
+    chown system system /sys/class/power_supply/battery/op_disable_charge
+    chmod 660 /sys/class/power_supply/battery/op_disable_charge
+    chown system system /sys/class/power_supply/bms/battery_h
+    chmod 660 /sys/class/power_supply/bms/battery_h
+    chown system system /sys/class/power_supply/bms/full_available_capacity
+    chmod 660 /sys/class/power_supply/bms/full_available_capacity
+    chown system system /sys/class/power_supply/bms/full_charge_capacity_filtered
+    chmod 660 /sys/class/power_supply/bms/full_charge_capacity_filtered
+
+on post-fs-data
+    mkdir /data/vendor/oemnvitems 0771 radio radio
+
+    mkdir /data/vendor/camera_update 0777 camera camera
+    write /data/vendor/camera_update/reservetuningbin0 ""
+    write /data/vendor/camera_update/reservetuningbin1 ""
+    write /data/vendor/camera_update/reservetuningbin2 ""
+    write /data/vendor/camera_update/reservetuningbin3 ""
+    write /data/vendor/camera_update/reservetuningbin4 ""
+    write /data/vendor/camera_update/reservetuningbin5 ""
+    write /data/vendor/camera_update/reservetuningbin6 ""
+
+    chmod 0666 /data/vendor/camera_update/reservetuningbin0
+    chmod 0666 /data/vendor/camera_update/reservetuningbin1
+    chmod 0666 /data/vendor/camera_update/reservetuningbin2
+    chmod 0666 /data/vendor/camera_update/reservetuningbin3
+    chmod 0666 /data/vendor/camera_update/reservetuningbin4
+    chmod 0666 /data/vendor/camera_update/reservetuningbin5
+    chmod 0666 /data/vendor/camera_update/reservetuningbin6
+
+on property:persist.sys.chgdisabled=1
+   write /sys/class/power_supply/battery/call_mode 1
+
+on property:persist.sys.chgdisabled=0
+   write /sys/class/power_supply/battery/call_mode 0
+
+on property:sys.boot_completed=1
+    write /sys/module/smb5_lib/parameters/sys_boot_complete 1
