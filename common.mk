@@ -214,7 +214,6 @@ PRODUCT_PACKAGES += \
     init.oem.rc \
     init.oem_ftm.rc \
     init.oem_rf.rc \
-    init.oplus_chg.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.factory.rc \
@@ -224,7 +223,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
     init.qti.qcv.rc \
