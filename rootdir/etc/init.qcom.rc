@@ -184,7 +184,7 @@ on boot
 
     # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
-    write /proc/sys/kernel/printk "3 6 1 7"
+    write /proc/sys/kernel/printk "4 6 1 7"
 
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
@@ -217,6 +217,10 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/enable
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
+    # Allow access to fpc fingerprint device attributes
+    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
+
     # Create directory used for display
     # for backward compatibility
     mkdir /persist/display 0770 system graphics
@@ -241,8 +245,8 @@ on boot
     chown system system /dev/fragment_monitor
 
     #QDSS
-    chown root oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
-    chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+    chown root oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+    chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
 
     #enable coresight for diag_mdlog_system over qdss
     write /sys/bus/coresight/devices/coresight-tmc-etr/buffer_size 0x2000000
@@ -262,6 +266,9 @@ on post-fs-data
 
     # Change lm related dirs
     mkdir /data/vendor/lm 0700 root root
+
+    # Create directory used by powermodule
+    mkdir /data/vendor/pwr 0700 root root
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
@@ -517,6 +524,9 @@ on property:persist.debug.trace=1
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
+on property:vendor.netflix.bsp_rev=*
+    setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
+
 on property:vendor.media.target_variant=*
     setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
@@ -552,14 +562,6 @@ service qmiproxy /system/bin/qmiproxy
     user radio
     group radio diag
     disabled
-
-# Adjust socket buffer to enlarge TCP receive window for high bandwidth
-# but only if ro.data.large_tcp_window_size property is set.
-on property:ro.data.large_tcp_window_size=true
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
-
-on property:sys.sysctl.tcp_adv_win_scale=*
-    write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
 
 service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwigig0 -Dnl80211 -c/data/vendor/wifi/wigig_supplicant.conf \
@@ -739,10 +741,6 @@ service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/glob
     group wifi
     disabled
     oneshot
-
-on property:ro.data.large_tcp_window_size=true
-    # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
 service battery_monitor /system/bin/battery_monitor
     user system
