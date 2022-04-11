@@ -6,3 +6,6 @@
 
 # Reserve
 /dev/block/bootdevice/by-name/reserve1         0660    root    system
+
+# WiFi
+firmware_directories /mnt/vendor/persist/copy/
