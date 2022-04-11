@@ -206,12 +206,10 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    charger_fw_fstab.qti \
     fstab.qcom \
     ftm_power_config.sh \
     init.class_main.sh \
     init.cust.rc \
-    init.kernel.post_boot.sh \
     init.oem.debug.rc \
     init.oem.rc \
     init.oem_ftm.rc \
@@ -225,19 +223,13 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
-    init.qti.kernel.rc \
-    init.qti.kernel.sh \
-    init.qti.qcv.rc \
-    init.qti.qcv.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     init.uicc.rc \
     ueventd.qcom.rc \
     vendor.oem_ftm.rc \
-    vendor.oem_ftm_svc_disable.rc \
-    vendor_modprobe.sh
+    vendor.oem_ftm_svc_disable.rc
 
 # Display
 PRODUCT_PACKAGES += \
