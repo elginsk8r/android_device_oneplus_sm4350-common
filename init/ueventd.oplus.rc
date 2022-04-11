@@ -13,3 +13,6 @@
 # Reserve
 /dev/block/sde72                               0600   system     system
 /dev/block/bootdevice/by-name/reserve1         0600   system     system
+
+# WiFi
+firmware_directories /mnt/vendor/persist/copy/
