@@ -1,5 +1,11 @@
+# Bluetooth
+persist.vendor.bt.aac_frm_ctl.enabled=true
+
 # Charging
 ro.charger.enable_suspend=1
 
 # DPM
 persist.vendor.dpm.feature=11
+
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org

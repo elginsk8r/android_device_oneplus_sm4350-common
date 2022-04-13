@@ -4,7 +4,6 @@ aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 persist.audio.fluence.speaker=true
 persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicecomm=true
 persist.audio.fluence.voicerec=false
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
@@ -96,7 +95,6 @@ vendor.voice.path.for.pcm.voip=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
-persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.oneplus.bt.asd.chain=0
 persist.vendor.oneplus.bt.asd.firmware=false
@@ -144,9 +142,6 @@ drm.service.enabled=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
 debug.egl.hw=0
