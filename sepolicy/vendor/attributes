@@ -3,17 +3,13 @@ attribute hal_cameraHIDL;
 attribute hal_cameraHIDL_client;
 attribute hal_cameraHIDL_server;
 
-attribute hal_charger;
-attribute hal_charger_client;
-attribute hal_charger_server;
-
 attribute hal_display;
 attribute hal_display_client;
 attribute hal_display_server;
 
-attribute hal_display_iris;
-attribute hal_display_iris_client;
-attribute hal_display_iris_server;
+attribute hal_eid;
+attribute hal_eid_client;
+attribute hal_eid_server;
 
 attribute hal_param;
 attribute hal_param_client;

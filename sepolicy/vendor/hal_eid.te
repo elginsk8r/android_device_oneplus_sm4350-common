@@ -1,0 +1,4 @@
+binder_call(hal_eid_client, hal_eid_server)
+binder_call(hal_eid_server, hal_eid_client)
+
+hal_attribute_hwservice(hal_eid, hal_eid_hwservice)
