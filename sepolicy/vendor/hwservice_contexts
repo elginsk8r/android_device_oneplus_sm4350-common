@@ -1,10 +1,11 @@
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon    u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix3626.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix3626.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonExt u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix3626.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonHbd u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix3626.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonFido u:object_r:hal_fingerprint_hwservice:s0
 vendor.oneplus.camera.CameraHIDL::IOnePlusCameraProvider                   u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.fingerprint.extension::IVendorFingerprintExtensions         u:object_r:hal_fingerprint_hwservice:s0
 vendor.oneplus.hardware.camera::IOnePlusCameraProvider                     u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.hardware.CameraMDMHIDL::IOnePlusCameraMDM                   u:object_r:hal_cameraHIDL_hwservice:s0
-vendor.oneplus.hardware.charger::ICharger                                  u:object_r:hal_charger_hwservice:s0
 vendor.oneplus.hardware.display::IOneplusDisplay                           u:object_r:hal_display_hwservice:s0
 vendor.oneplus.hardware.param::IOneplusParam                               u:object_r:hal_param_hwservice:s0
-vendor.pixelworks.hardware.display::IIris                                  u:object_r:hal_display_iris_hwservice:s0
-vendor.pixelworks.hardware.feature::IIrisFeature                           u:object_r:hal_display_iris_hwservice:s0
+vendor.rongcard.hardware.eid::IEidDevice                                   u:object_r:hal_eid_hwservice:s0
