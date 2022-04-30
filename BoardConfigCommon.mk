@@ -70,6 +70,7 @@ TARGET_BOOTLOADER_BOARD_NAME := holi
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Bluetooth

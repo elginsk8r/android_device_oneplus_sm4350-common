@@ -244,6 +244,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
+# DiracGef
+PRODUCT_PACKAGES += \
+    OnePlusDiracGef
+
 # Doze
 PRODUCT_PACKAGES += \
     OnePlusDoze

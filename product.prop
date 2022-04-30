@@ -1,0 +1,13 @@
+# Audio
+ro.dirac.acs.controller=gef
+ro.dirac.acs.storeSettings=1
+ro.dirac.acs.ignore_error=1
+ro.dirac.gef.ext.appt=0x00011130,0x00011134
+ro.dirac.gef.ext.did=10,20,45
+ro.dirac.gef.ext.mid=0x10012DE1
+ro.dirac.gef.ext.tid=0x10012D01
+ro.dirac.gef.int.appt=0x00011130,0x00011134
+ro.dirac.gef.int.did=15
+ro.dirac.gef.int.mid=0x10012DE0
+ro.dirac.gef.int.tid=0x10012D00
+ro.dirac.path=/vendor/etc/dirac
