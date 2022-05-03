@@ -338,6 +338,11 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor
 
+# Misc
+PRODUCT_PACKAGES += \
+    libchrome \
+    libchrome.vendor
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
