@@ -180,9 +180,6 @@ debug.stagefright.omx_default_rank=0
 # Netmgr
 persist.vendor.data.iwlan.enable=true
 
-# PASR
-vendor.power.pasr.enabled=false
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
