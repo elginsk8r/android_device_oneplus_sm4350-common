@@ -228,13 +228,13 @@
     <integer name="config_shutdownBatteryTemperature">680</integer>
 
     <!-- Average Current for bluetooth controller when idle. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_idle_cur_ma">6</integer>
+    <integer translatable="false" name="config_bluetooth_idle_cur_ma">3</integer>
 
     <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_rx_cur_ma">28</integer>
+    <integer translatable="false" name="config_bluetooth_rx_cur_ma">20</integer>
 
     <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_tx_cur_ma">36</integer>
+    <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
 
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
@@ -255,23 +255,6 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>10</item>
     </integer-array>
-
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/bin/surfaceflinger"</item>
-    </string-array>
-
-    <!-- Should the pinner service pin the Camera application? -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">true</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -308,10 +291,18 @@
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
         <item>0</item>
+        <item>1</item>
+        <item>3</item>
         <item>256</item>
         <item>257</item>
         <item>258</item>
         <item>259</item>
+        <item>260</item>
+        <item>261</item>
+        <item>262</item>
+        <item>263</item>
+        <item>264</item>
+        <item>265</item>
     </integer-array>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
@@ -328,5 +319,8 @@
          the framework from using higher refresh rates, even if display modes with higher refresh
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">120</integer>
+    <integer name="config_defaultPeakRefreshRate">90</integer>
+
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
 </resources>

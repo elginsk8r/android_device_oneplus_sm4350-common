@@ -1842,6 +1842,15 @@
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="260">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="rtt_supported_for_vt_bool" value="false" />
@@ -1853,16 +1862,43 @@
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="160">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="200">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="210">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="rtt_auto_upgrade_bool" value="true" />
@@ -1875,26 +1911,71 @@
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="220">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="230">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="240">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="250">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="270">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
@@ -1903,6 +1984,15 @@
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="310">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="rtt_auto_upgrade_bool" value="true" />
@@ -1915,6 +2005,15 @@
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="490">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
@@ -1936,11 +2035,29 @@
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="660">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="800">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
         <boolean name="editable_enhanced_4g_lte_bool" value="false" />
@@ -1973,16 +2090,42 @@
         <boolean name="carrier_call_composer_supported_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
     </carrier_config>
+    <carrier_config mcc="311" mnc="490">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
+    </carrier_config>
+    <carrier_config mcc="311" mnc="870">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
+    </carrier_config>
     <carrier_config mcc="312" mnc="530">
         <boolean name="rtt_supported_bool" value="true" />
         <boolean name="rtt_upgrade_supported_bool" value="true" />
         <boolean name="rtt_downgrade_supported_bool" value="true" />
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
-        <string-array name="mmi_two_digit_number_pattern_string_array" num="3">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
             <item value="0" />
+            <item value="1" />
             <item value="00" />
             <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
         </string-array>
     </carrier_config>
     <carrier_config mcc="312" mnc="670">
@@ -2083,6 +2226,15 @@
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="120">
+        <string-array name="mmi_two_digit_number_pattern_string_array" num="7">
+            <item value="0" />
+            <item value="1" />
+            <item value="00" />
+            <item value="*2" />
+            <item value="*3" />
+            <item value="*4" />
+            <item value="*5" />
+        </string-array>
         <boolean name="rtt_supported_bool" value="true" />
         <boolean name="rtt_upgrade_supported_bool" value="true" />
         <boolean name="rtt_downgrade_supported_bool" value="true" />
