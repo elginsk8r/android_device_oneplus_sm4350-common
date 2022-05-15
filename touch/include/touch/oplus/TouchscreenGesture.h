@@ -55,11 +55,10 @@ class TouchscreenGesture : public ITouchscreenGesture {
         kGestureDownToUp,
         kGestureM,
         kGestureW,
+        kGestureS,
+        kGestureSingleTap,
         kGestureFingerprintDown,
         kGestureFingerprintUp,
-        kGestureSingleTap,
-        kGestureHeart,
-        kGestureS,
     };
 
     const std::map<int, std::string> kGestureNames = {
@@ -77,11 +76,10 @@ class TouchscreenGesture : public ITouchscreenGesture {
             {kGestureDownToUp, "One finger up swipe"},
             {kGestureM, "Letter M"},
             {kGestureW, "Letter W"},
+            {kGestureS, "Letter S"},
+            {kGestureSingleTap, "Single tap"},
             {kGestureFingerprintDown, "Fingerprint down"},
             {kGestureFingerprintUp, "Fingerprint up"},
-            {kGestureSingleTap, "Single tap"},
-            {kGestureHeart, "Heart"},
-            {kGestureS, "Letter S"},
     };
 
     template <typename H, typename... T>
