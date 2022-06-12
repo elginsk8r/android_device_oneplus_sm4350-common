@@ -7,6 +7,9 @@
 # NFC
 /dev/st21nfc                                   0660    nfc     nfc
 
+# Param
+/dev/block/by-name/param                       0660    root    system
+
 # Reserve
 /dev/block/bootdevice/by-name/reserve1         0660    root    system
 

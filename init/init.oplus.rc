@@ -45,6 +45,9 @@ on boot
     chown system system /sys/class/drm/card0-DSI-1/oplus_shutdownflag
     chown system system /sys/class/drm/card0-DSI-1/panel_serial_number
 
+    # Param
+    chown system system /dev/param
+
     # Radio
     chown radio radio /sys/class/drm/card0-DSI-1/osc_mode
     chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
