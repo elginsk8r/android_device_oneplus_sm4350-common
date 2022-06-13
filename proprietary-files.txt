@@ -234,7 +234,7 @@ vendor/lib64/libVDSuperPhotoAPI.so
 vendor/lib64/libVDUpScale.so
 vendor/lib64/vendor.oneplus.hardware.camera@1.0.so
 vendor/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|a6c2d3ebba23ea83b931366cd6200ac3f7cd0728|cc424bea56f93d508464ec9f0a137c5b6ff36cce
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -754,12 +754,8 @@ vendor/lib64/unnhal-acc-gpu.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-vendor/etc/libnfc_beijing_config.conf
-vendor/etc/libnfc_gcf_config.conf
 vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc_shanghai_config.conf
-vendor/etc/libnfc_xiamen_config.conf
 vendor/etc/nfc_config_type.conf
 vendor/etc/st21nfc_conf.txt
 vendor/firmware/st21nfc_fw.bin
