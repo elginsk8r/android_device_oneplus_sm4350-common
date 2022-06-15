@@ -1,4 +1,5 @@
 # procfs
+genfscon proc /qcom_flash                           u:object_r:proc_qcom_flash:s0
 genfscon proc /force_reset                          u:object_r:proc_force_reset:s0
 genfscon proc /pmicWd                               u:object_r:proc_pmic_watchdog:s0
 genfscon proc /s2_reset_config                      u:object_r:proc_s2_reset_config:s0
