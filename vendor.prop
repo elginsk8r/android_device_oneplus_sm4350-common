@@ -117,7 +117,7 @@ vendor.camera.aux.packagelist=com.oneplus.factorymode,com.oplus.camera,com.oem.a
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SM8350
+ro.soc.model=SM4350
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
