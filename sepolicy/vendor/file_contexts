@@ -28,6 +28,7 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service.st                                   u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.evervolv\.touch@1\.0-service\.oneplus                            u:object_r:hal_evervolv_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus_holi                  u:object_r:hal_evervolv_livedisplay_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                           u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                    u:object_r:hal_cameraHIDL_default_exec:s0
