@@ -62,6 +62,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm4350
 TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
+TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM_IAS=0
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
