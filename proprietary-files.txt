@@ -444,13 +444,6 @@ vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# Eid
-vendor/app/EidService/EidService.apk
-vendor/bin/hw/vendor.rongcard.hardware.eid@1.0-service
-vendor/etc/init/vendor.rongcard.hardware.eid@1.0-service.rc
-vendor/lib64/hw/vendor.rongcard.hardware.eid@1.0-impl.so
-vendor/lib64/vendor.rongcard.hardware.eid@1.0.so
-
 # ESE
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
