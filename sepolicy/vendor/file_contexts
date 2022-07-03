@@ -5,7 +5,7 @@
 # Block devices
 /dev/block/platform/soc/4804000\.ufshc/by-name/logo_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/oplusdycnvbk          u:object_r:vendor_modem_efs_partition_device:s0
-/dev/block/platform/soc/4804000\.ufshc/by-name/oplusreserve[0-5]     u:object_r:reserve2_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/oplusreserve[1-4]     u:object_r:reserve2_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/oplusstanvbk_[ab]     u:object_r:vendor_modem_efs_partition_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/param                 u:object_r:param_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/rawdump               u:object_r:vendor_rawdump_block_device:s0
@@ -62,7 +62,6 @@
 /sys/class/power_supply/bms/full_available_capacity                                                                  u:object_r:vendor_sysfs_battery_supply:s0
 /sys/class/power_supply/bms/full_charge_capacity_filtered                                                            u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-1/1-006b/power_supply/parallel/type                                        u:object_r:vendor_sysfs_battery_supply:s0
-
 
 # Sys files (wakeup)
 /sys/devices(/platform)?/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pmk[0-9]+@[0-9]+:pon_hlos@[0-9]+/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
