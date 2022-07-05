@@ -208,6 +208,7 @@ vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
+vendor/lib64/libPerfectColor.so
 vendor/lib64/libPerfectlyClearCruxOpt.so
 vendor/lib64/libPolarrRender.so
 vendor/lib64/libqll10.so
@@ -221,7 +222,7 @@ vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libSonyIMX471RmscLibrary.so
-vendor/lib64/libstblur_capture_api.so
+vendor/lib64/libstface_fd_api.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
