@@ -187,6 +187,7 @@ vendor.power.pasr.enabled=false
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
+persist.radio.multisim.config=ssss
 persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
