@@ -719,7 +719,6 @@ vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_holi.xml
-vendor/etc/media_profiles_vendor.xml
 -vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
