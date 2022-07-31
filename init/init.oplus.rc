@@ -62,5 +62,8 @@ on boot
     chown radio radio /sys/class/drm/card0-DSI-1/osc_mode
     chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
 
+on post-fs-data
+    mkdir /data/vendor/oemnvitems 0771 radio radio
+
 on property:sys.boot_completed=1
     write /sys/module/smb5_lib/parameters/sys_boot_complete 1
